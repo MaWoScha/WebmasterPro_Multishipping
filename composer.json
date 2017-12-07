@@ -1,0 +1,25 @@
+{
+    "name": "webmasterpro/multishipping",
+    "description": "WebmasterPro - Multishipping",
+    "type": "magento-module",
+    "authors":[
+        {
+            "name":"Fabian Ziegler",
+            "email": "info@team23.de"
+        },
+        {
+            "name":"Marc Rochow",
+            "email": "kontakt@gironimo.org"
+        }
+    ],
+  "homepage": "https://github.com/MaWoScha/WebmasterPro-Multishipping",
+  "require": {
+    "magento-hackathon/magento-composer-installer": "*"
+  },
+  "extra": {
+    "map": [
+      ["app/code/community/WebmasterPro/Multishipping/*", "app/code/community/WebmasterPro/Multishipping/"],
+      ["app/design/adminhtml/default/default/template/multishipping/*", "app/design/adminhtml/default/default/template/multishipping/"]
+    ]
+  }
+}

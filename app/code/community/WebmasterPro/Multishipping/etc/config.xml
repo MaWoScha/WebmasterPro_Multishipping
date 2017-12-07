@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * @category  WebmasterPro
+ * @package   WebmasterPro_Multishipping
+ * @authors   Marc Rochow <http://gironimo.org/>, Fabian Ziegler <http://team23.de/>
+ * @developer
+ * @version   1.0.0
+ * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @source    http://www.webmasterpro.de/coding/article/php-tutorial-magento-extension-erstellen.html
+ */
+ -->
+<config>
+    <modules>
+        <WebmasterPro_Multishipping>
+            <version>1.0.0</version>
+        </WebmasterPro_Multishipping>
+    </modules>
+
+    <!-- Konfiguration unseres Modul-Verhaltens -->
+    <global>
+        <models>
+            <!-- Wir geben unserem Modul hier einen eigenen Namensraum -->
+            <multishipping>
+                <class>WebmasterPro_Multishipping_Model</class>
+            </multishipping>
+        </models>
+
+        <!-- Brauchen wir, um später formatierte Ausgaben zu erzeugen -->
+        <blocks>
+            <multishipping>
+                <class>WebmasterPro_Multishipping_Block</class>
+            </multishipping>
+        </blocks>
+
+        <!-- für Hilfsfunktionen -->
+        <helpers>
+            <multishipping>
+                <class>WebmasterPro_Multishipping_Helper</class>
+            </multishipping>
+        </helpers>
+    </global>
+
+    <default>
+        <carriers>
+            <multistore_shipping> <!-- Neue Versandart hinzufügen -->
+                <active>0</active> <!-- aktiv 0 - nein / 1 - ja -->
+                <sallowspecific>0</sallowspecific> <!-- erlaubte Länder auswählbar? -->
+                <model>multishipping/carrier_multishipping</model> <!-- dort lebt die Logik unseres Moduls -->
+                <name>TableRate Shipping Multistore</name> <!-- Name, wird so im Adminbereich angezeigt -->
+                <title>TableRate Shipping Multistore</title> <!-- Titel, zur Ausgabe im Frontend -->
+                <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg> <!-- Fehlernachricht, falls Versandmethode nicht aktiviert ist -->
+                <handling_type>F</handling_type> <!-- Für Steuerzonen Behandlung -->
+            </multistore_shipping>
+        </carriers>
+    </default>
+</config>
