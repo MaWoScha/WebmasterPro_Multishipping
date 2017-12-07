@@ -19,7 +19,12 @@
   "extra": {
     "map": [
       ["app/code/community/WebmasterPro/Multishipping/*", "app/code/community/WebmasterPro/Multishipping/"],
-      ["app/design/adminhtml/default/default/template/multishipping/*", "app/design/adminhtml/default/default/template/multishipping/"]
+      ["app/design/adminhtml/default/default/template/multishipping/*", "app/design/adminhtml/default/default/template/multishipping/"],
+      ["app/locale/de_DE/WebmasterPro_Multishipping.csv", "app/locale/de_DE/WebmasterPro_Multishipping.csv"],
+      ["app/locale/en_US/WebmasterPro_Multishipping.csv", "app/locale/en_US/WebmasterPro_Multishipping.csv"],
+      ["app/locale/es_ES/WebmasterPro_Multishipping.csv", "app/locale/es_ES/WebmasterPro_Multishipping.csv"],
+      ["app/locale/fr_FR/WebmasterPro_Multishipping.csv", "app/locale/fr_FR/WebmasterPro_Multishipping.csv"],
+      ["app/locale/pt_PT/WebmasterPro_Multishipping.csv", "app/locale/pt_PT/WebmasterPro_Multishipping.csv"]
     ]
   }
 }

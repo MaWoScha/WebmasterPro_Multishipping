@@ -5,7 +5,7 @@
  * @package   WebmasterPro_Multishipping
  * @authors   Marc Rochow <http://gironimo.org/>, Fabian Ziegler <http://team23.de/>
  * @developer
- * @version   1.0.1
+ * @version   1.0.2
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @source    http://www.webmasterpro.de/coding/article/php-tutorial-magento-extension-erstellen.html
  */
@@ -13,7 +13,7 @@
 <config>
     <modules>
         <WebmasterPro_Multishipping>
-            <version>1.0.1</version>
+            <version>1.0.2</version>
             <depends>
                 <Mage_Shipping />
             </depends>
@@ -44,6 +44,38 @@
         </helpers>
     </global>
 
+    <adminhtml>
+        <translate>
+            <modules>
+                <WebmasterPro_Multishipping>
+                    <files>
+                        <default>Mage_Shipping.csv</default>
+                        <multishipping>WebmasterPro_Multishipping.csv</multishipping>
+                    </files>
+                </WebmasterPro_Multishipping>
+            </modules>
+        </translate>
+    </adminhtml>
+    <frontend>
+        <translate>
+            <modules>
+                <WebmasterPro_Multishipping>
+                    <files>
+                        <default>Mage_Shipping.csv</default>
+                        <multishipping>WebmasterPro_Multishipping.csv</multishipping>
+                    </files>
+                </WebmasterPro_Multishipping>
+            </modules>
+        </translate>
+        <layout>
+            <updates>
+                <multishipping>
+                    <file>multishipping.xml</file>
+                </multishipping>
+            </updates>
+        </layout>
+    </frontend>
+
     <default>
         <carriers>
 <!-- For group 'multistore_shipping' see const in class WebmasterPro_Multishipping_Model_Carrier_MultistoreShipping -->
@@ -54,7 +86,7 @@
                 <name>TableRate Shipping Multistore</name> <!-- Name, wird so im Adminbereich angezeigt -->
                 <title>TableRate Shipping Multistore</title> <!-- Titel, zur Ausgabe im Frontend -->
                 <specificerrmsg>This shipping method is currently unavailable. If you would like to ship using this shipping method, please contact us.</specificerrmsg> <!-- Fehlernachricht, falls Versandmethode nicht aktiviert ist -->
-                <handling_type>F</handling_type> <!-- Für Steuerzonen Behandlung -->
+                <cutoff_cost>50</cutoff_cost>
             </multistore_shipping>
         </carriers>
     </default>

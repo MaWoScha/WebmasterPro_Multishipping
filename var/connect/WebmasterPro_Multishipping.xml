@@ -6,10 +6,16 @@
       <version_ids>2</version_ids>
    </version_ids>
    <summary>WebmasterPro - Multishipping-Module</summary>
-   <description>A module for shipping, which allows to define different shipping costs and specify the lower limit for free shipping orders for each country separately.</description>
+   <description>A module for shipping, which allows to define different shipping costs and specify the lower limit for free shipping orders for each country separately.
+
+Ein Modul für den Versand, welches ermöglicht, unterschiedliche Versandkosten zu definieren und die Untergrenze für versandkostenfreie Bestellungen für jedes Land gesondert angeben.
+
+Un módulo para el envío, que permite definir diferentes costes de envío y especificar el límite inferior para órdenes libres del envío para cada país por separado.
+
+Un module pour l'expédition, qui permet de définir les différents frais d'expédition et de spécifier la limite inférieure pour les commandes d'expédition gratuite pour chaque pays séparément.</description>
    <license>OSL</license>
    <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
-   <version>1.0.1</version>
+   <version>1.0.2</version>
    <stability>stable</stability>
    <notes>none/keine/ninguna</notes>
    <authors>
@@ -64,20 +70,38 @@
          <target>magecommunity</target>
          <target>mageetc</target>
          <target>magedesign</target>
+         <target>magelocale</target>
+         <target>magelocale</target>
+         <target>magelocale</target>
+         <target>magelocale</target>
+         <target>magelocale</target>
       </target>
       <path>
          <path/>
          <path>WebmasterPro/Multishipping</path>
          <path>modules/WebmasterPro_Multishipping.xml</path>
          <path>adminhtml/default/default/template/multishipping</path>
+         <path>de_DE/WebmasterPro_Multishipping.csv</path>
+         <path>en_US/WebmasterPro_Multishipping.csv</path>
+         <path>es_ES/WebmasterPro_Multishipping.csv</path>
+         <path>fr_FR/WebmasterPro_Multishipping.csv</path>
+         <path>pt_PT/WebmasterPro_Multishipping.csv</path>
       </path>
       <type>
          <type>file</type>
          <type>dir</type>
          <type>file</type>
          <type>dir</type>
+         <type>file</type>
+         <type>file</type>
+         <type>file</type>
+         <type>file</type>
+         <type>file</type>
       </type>
       <include>
+         <include/>
+         <include/>
+         <include/>
          <include/>
          <include/>
          <include/>
@@ -87,6 +111,11 @@
       </include>
       <ignore>
          <ignore/>
+         <ignore>#^.DS_Store#</ignore>
+         <ignore>#^.DS_Store#</ignore>
+         <ignore>#^.DS_Store#</ignore>
+         <ignore>#^.DS_Store#</ignore>
+         <ignore>#^.DS_Store#</ignore>
          <ignore>#^.DS_Store#</ignore>
          <ignore>#^.DS_Store#</ignore>
          <ignore>#^.DS_Store#</ignore>
