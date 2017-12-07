@@ -5,7 +5,7 @@
  * @package   WebmasterPro_Multishipping
  * @authors   Marc Rochow <http://gironimo.org/>, Fabian Ziegler <http://team23.de/>
  * @developer
- * @version   1.0.0
+ * @version   1.0.1
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @source    http://www.webmasterpro.de/coding/article/php-tutorial-magento-extension-erstellen.html
  */
@@ -13,7 +13,10 @@
 <config>
     <modules>
         <WebmasterPro_Multishipping>
-            <version>1.0.0</version>
+            <version>1.0.1</version>
+            <depends>
+                <Mage_Shipping />
+            </depends>
         </WebmasterPro_Multishipping>
     </modules>
 
@@ -33,7 +36,7 @@
             </multishipping>
         </blocks>
 
-        <!-- für Hilfsfunktionen -->
+        <!-- für Hilfsfunktionen, etwa der Übersetzungsfunktion -->
         <helpers>
             <multishipping>
                 <class>WebmasterPro_Multishipping_Helper</class>
@@ -43,6 +46,7 @@
 
     <default>
         <carriers>
+<!-- For group 'multistore_shipping' see const in class WebmasterPro_Multishipping_Model_Carrier_MultistoreShipping -->
             <multistore_shipping> <!-- Neue Versandart hinzufügen -->
                 <active>0</active> <!-- aktiv 0 - nein / 1 - ja -->
                 <sallowspecific>0</sallowspecific> <!-- erlaubte Länder auswählbar? -->

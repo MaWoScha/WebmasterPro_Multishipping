@@ -9,7 +9,7 @@
    <description>A module for shipping, which allows to define different shipping costs and specify the lower limit for free shipping orders for each country separately.</description>
    <license>OSL</license>
    <license_uri>http://opensource.org/licenses/osl-3.0.php</license_uri>
-   <version>1.0.0</version>
+   <version>1.0.1</version>
    <stability>stable</stability>
    <notes>none/keine/ninguna</notes>
    <authors>

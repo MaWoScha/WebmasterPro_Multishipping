@@ -4,7 +4,7 @@
  * @package   WebmasterPro_Multishipping
  * @authors   Marc Rochow <http://gironimo.org/>, Fabian Ziegler <http://team23.de/>
  * @developer
- * @version   1.0.0
+ * @version   1.0.1
  * @license   http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  * @source    http://www.webmasterpro.de/coding/article/php-tutorial-magento-extension-erstellen.html
  */
@@ -19,7 +19,7 @@ class WebmasterPro_Multishipping_Block_Admin_System_Config_Form_Field_Pricetable
     /**
      * Retrieve group column renderer
      *
-     * @return Mage_CatalogInventory_Block_Adminhtml_Form_Field_Customergroup
+     * @return WebmasterPro_Multishipping_Block_Admin_Form_Field_Country (Mage_Core_Block_Html_Select)
      */
     protected function _getPriceRenderer()
     {
@@ -43,24 +43,24 @@ class WebmasterPro_Multishipping_Block_Admin_System_Config_Form_Field_Pricetable
     public function __construct()
     {
         $this->addColumn('country_id', array(
-            'label' => Mage::helper('multishipping')->__('Land'),
+            'label' => Mage::helper('adminhtml')->__('Country'),
             'style' => 'width: 150px'
         ));
 
         $this->addColumn('price', array(
-            'label' => Mage::helper('multishipping')->__('Versandkosten'),
+            'label' => Mage::helper('adminhtml')->__('Shipping Price'),
             'style' => 'width: 100px'
         ));
 
         $this->addColumn('free_shipping_price', array(
-            'label' => Mage::helper('multishipping')->__('Versandkostenfrei ab'),
+            'label' => Mage::helper('multishipping')->__('Free Shipping with Minimum Order Amount'),
             'style' => 'width: 100px'
         ));
 
         parent::__construct();
 
         $this->setTemplate('multishipping/system/config/form/field/array.phtml');
-        $this->_addButtonLabel = Mage::helper('adminhtml')->__('Land hinzufügen');
+        $this->_addButtonLabel = Mage::helper('multishipping')->__('Add Country');
     }
 
     /**
@@ -74,7 +74,7 @@ class WebmasterPro_Multishipping_Block_Admin_System_Config_Form_Field_Pricetable
         $this->setElement($element);
 
         $this->addColumn('country_id', array(
-            'label' => Mage::helper('multishipping')->__('Land'),
+            'label' => Mage::helper('adminhtml')->__('Country'),
             'renderer' => $this->_getPriceRenderer()
         ));
 
